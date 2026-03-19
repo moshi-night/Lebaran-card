@@ -1062,7 +1062,7 @@
       const music = document.getElementById('thrMusic');
       if (name === 'thr') {
         music.currentTime = 0;
-        music.play().catch(() => {});
+        music.play().catch(e => console.log('Audio blocked:', e));
         setTimeout(startVirusType, 100);
       } else {
         music.pause();
